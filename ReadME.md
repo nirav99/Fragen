@@ -14,4 +14,7 @@ Many common data structures and algorithms questions and their solutions.
 #### [Recursion](src/com/recursion)
 - [Permutations & combinations of given word](src/com/recursion/Permute.C)
 - [N Queen problem](src/com/recursion/NQueenProblem.java)
-- [Matrix all paths](src/com/recursion/MatrixAllPaths.java)
+- [Print all paths through a matrix](src/com/recursion/MatrixAllPaths.java)
+
+#### [Trees](src/com/trees)
+- [Least common ancestor in a binary search tree](src/com/trees/LeastCommonAncestorBinarySearchTree.java)
