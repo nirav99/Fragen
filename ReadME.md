@@ -18,3 +18,8 @@ Many common data structures and algorithms questions and their solutions.
 
 #### [Trees](src/com/trees)
 - [Least common ancestor in a binary search tree](src/com/trees/LeastCommonAncestorBinarySearchTree.java)
+
+## [Dynamic Programming](src/com/dynamicproogramming)
+- [Optimal order of Matrix Multiplication](src/com/dynamicprogramming/OptimalMatrixMultiplicationCost.java)
+- [Max sum path](src/com/dynamicprogramming/MaxSumPathThroughTriangle.java)
+- [String alignment](src/com/dynamicprogramming/SmithWaterman.java)
