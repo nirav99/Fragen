@@ -20,6 +20,7 @@ Many common data structures and algorithms questions and their solutions.
 #### [Graph Algorithms](src/com/graphs)
 - [Dijkstra's shortest path algorithm](src/com/graphs/MinCostPath.java)
 - [Kruskal's min. spanning tree](src/com/graphs/MinSpanningTreeKruskals.java)
+- [Word transformation using breadth first search](src/com/graphs/WordLadder.java)
 
 #### [Recursion](src/com/recursion)
 - [Permutations & combinations of given word](src/com/recursion/Permute.C)
@@ -28,6 +29,7 @@ Many common data structures and algorithms questions and their solutions.
 - [Power set of a given string](src/com/recursion/PowerSetRecursive.java)
 - [Phone number to letters](src/com/recursion/PhoneNumberToLetters.java)
 - [Power sum](src/com/recursion/PowerSum.java)
+- [Numbers adding upto a given threshold](src/com/recursion/NumbersAddingUpToThreshold.java)
 
 #### [Trie](src/com/trie)
 - [Longest common prefix of a set of strings](src/com/trie/LongestCommonPrefix.java)
