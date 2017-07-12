@@ -20,16 +20,16 @@ public class MaxSumPathThroughTriangle
   
   public MaxSumPathThroughTriangle(int[][] triangle)
   {
-  	maxRows = triangle.length;
-  	
+    maxRows = triangle.length;
+    
     this.triangle = triangle;
     
     cost = new int[maxRows][maxRows];
     
     for(int i = 0; i < maxRows; i++)
     {
-    	for(int j = 0; j < maxRows; j++)
-    		cost[i][j] = 0;
+      for(int j = 0; j < maxRows; j++)
+        cost[i][j] = 0;
     }
   }
   
@@ -37,18 +37,18 @@ public class MaxSumPathThroughTriangle
   {
     for(int i = 0; i < maxRows; i++)
     {
-    	for(int j = 0; j <= i; j++)
-    	{
-    		cost[i][j] = getMaxParentSum(i, j) + triangle[i][j];
-    	}
+      for(int j = 0; j <= i; j++)
+      {
+        cost[i][j] = getMaxParentSum(i, j) + triangle[i][j];
+      }
     }
 
     int maxSum = cost[maxRows - 1][0];
     
     for(int i = 1; i < maxRows; i++)
     {
-    	if(maxSum < cost[maxRows - 1][i])
-    	  maxSum = cost[maxRows - 1][i];
+      if(maxSum < cost[maxRows - 1][i])
+        maxSum = cost[maxRows - 1][i];
     }
     
     return maxSum;
@@ -62,21 +62,21 @@ public class MaxSumPathThroughTriangle
     
     if(i - 1 >= 0)
     {
-    	if(j - 1 >= 0)
-    		parentArray[0] = cost[i - 1][j - 1];
-    	
-    	parentArray[1] = cost[i - 1][j];
-    	
-    	if(j + 1 <= maxRows - 1)
-    		parentArray[2] = cost[i - 1][j + 1];
+      if(j - 1 >= 0)
+        parentArray[0] = cost[i - 1][j - 1];
+      
+      parentArray[1] = cost[i - 1][j];
+      
+      if(j + 1 <= maxRows - 1)
+        parentArray[2] = cost[i - 1][j + 1];
     }
     
     int max = parentArray[0];
     
     for(int index = 1; index < parentArray.length; index++)
     {
-    	if(max < parentArray[index])
-    		max = parentArray[index];
+      if(max < parentArray[index])
+        max = parentArray[index];
     }
     
     return max;
