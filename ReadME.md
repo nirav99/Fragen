@@ -12,6 +12,7 @@ Many common data structures and algorithms questions and their solutions.
 - [Power set of a given string - non recursive](src/com/arrays_strings/PowerSetNonRecursive.java)
 - [Maximum subsequence sum of an int array](src/com/arrays_strings/maxSubseqSum.C)
 - [Spiral traversal of a matrix](src/com/arrays_strings/MatrixTraversal.java)
+- [Cost of fused rods](src/com/arrays_strings/CostFusedRods.java)
 
 #### [Dynamic Programming](src/com/dynamicproogramming)
 - [Optimal order of Matrix Multiplication](src/com/dynamicprogramming/OptimalMatrixMultiplicationCost.java)
