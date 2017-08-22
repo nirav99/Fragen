@@ -29,9 +29,10 @@ public class LongestPalindrome
   {
     for(int i = 0; i < input.length(); i++)
     {
-      // Generate substrings of length 1 and find palindromes
+      // Generate substrings of length 1 and grow it to find palindromes
       palindromeHelper(input.substring(i, i + 1), i - 1, i+ 1);
       
+      // Generate a substring of length 2 and grow it to find palindromes
       if(i < input.length() - 1)
         palindromeHelper(input.substring(i, i+ 2), i - 1, i + 2);
       
