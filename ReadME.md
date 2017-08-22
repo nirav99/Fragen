@@ -13,6 +13,7 @@ Many common data structures and algorithms questions and their solutions.
 - [Maximum subsequence sum of an int array](src/com/arrays_strings/maxSubseqSum.C)
 - [Spiral traversal of a matrix](src/com/arrays_strings/MatrixTraversal.java)
 - [Cost of fused rods](src/com/arrays_strings/CostFusedRods.java)
+- [Longest palindrome in the given string](src/com/arrays_strings/LongestPalindrome.java)
 
 #### [Dynamic Programming](src/com/dynamicproogramming)
 - [Optimal order of Matrix Multiplication](src/com/dynamicprogramming/OptimalMatrixMultiplicationCost.java)
