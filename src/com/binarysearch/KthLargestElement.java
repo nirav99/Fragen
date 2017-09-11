@@ -1,4 +1,4 @@
-package binarysearch;
+package com.binarysearch;
 
 import java.util.Arrays;
 import java.util.Random;
