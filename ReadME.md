@@ -43,3 +43,5 @@ Many common data structures and algorithms questions and their solutions.
 
 #### [Sorting](src/com/sorting)
 - [QuickSort](src/com/sorting/QuickSort.java)
+
+### [Binary Search](src/com/binarysearch/KthLargestElement.java)
