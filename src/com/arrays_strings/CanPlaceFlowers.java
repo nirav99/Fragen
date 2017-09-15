@@ -18,44 +18,44 @@ package com.arrays_strings;
  */
 public class CanPlaceFlowers
 {
-	public boolean canPlaceFlower(int[] a, int numFlowers)
-	{
-		int n = 0;
-		int[] input = a.clone();
-		
-		for(int i = 0; i < input.length; i++)
-		{
-			if(canPlaceFlowerAtGivenPosition(input, i))
-			{
-				input[i] = 1;
-				n++;
-				
-				if(n >= numFlowers)
-					return true;
-			}
-		}
-		return false;
-	}
-	
-	private boolean canPlaceFlowerAtGivenPosition(int[] input, int i)
-	{
-		if(input[i] == 1)
-			return false;
-		
-		if(i > 0 && input[i - 1] == 1)
-			return false;
-		
-		if(i < input.length - 1 && input[i + 1] == 1)
-			return false;
-		
-		return true;
-	}
-	
+  public boolean canPlaceFlower(int[] a, int numFlowers)
+  {
+    int n = 0;
+    int[] input = a.clone();
+    
+    for(int i = 0; i < input.length; i++)
+    {
+      if(canPlaceFlowerAtGivenPosition(input, i))
+      {
+        input[i] = 1;
+        n++;
+        
+        if(n >= numFlowers)
+          return true;
+      }
+    }
+    return false;
+  }
+  
+  private boolean canPlaceFlowerAtGivenPosition(int[] input, int i)
+  {
+    if(input[i] == 1)
+      return false;
+    
+    if(i > 0 && input[i - 1] == 1)
+      return false;
+    
+    if(i < input.length - 1 && input[i + 1] == 1)
+      return false;
+    
+    return true;
+  }
+  
   public static void main(String[] args)
   {
-  	int[] input = {0, 0, 0, 0, 1};
-  	
-  	System.out.println(new CanPlaceFlowers().canPlaceFlower(input, 1));
-  	System.out.println(new CanPlaceFlowers().canPlaceFlower(input, 2));
+    int[] input = {0, 0, 0, 0, 1};
+    
+    System.out.println(new CanPlaceFlowers().canPlaceFlower(input, 1));
+    System.out.println(new CanPlaceFlowers().canPlaceFlower(input, 2));
   }
 }

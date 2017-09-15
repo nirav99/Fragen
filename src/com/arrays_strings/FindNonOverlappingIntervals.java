@@ -14,8 +14,8 @@ import java.util.*;
  */
 public class FindNonOverlappingIntervals
 {
-	public static ArrayList<Interval> getNonOverlappingIntervals(ArrayList<Interval> data)
-	{
+  public static ArrayList<Interval> getNonOverlappingIntervals(ArrayList<Interval> data)
+  {
     ArrayList<Interval> nonOverlap = new ArrayList<Interval>();
     HashSet<Interval> overlapSet = new HashSet<Interval>();
    
@@ -23,54 +23,54 @@ public class FindNonOverlappingIntervals
     
     for(int i = 0; i < data.size() - 1 ; i++)
     {
-    	Interval curr = data.get(i);
-    	Interval next = data.get(i + 1);
-    	
-    	if(curr.end > next.start)
-    	{
-    		overlapSet.add(curr);
-    		overlapSet.add(next);
-    	}
-    	if(maxEndInterval.end > next.start)
-    	{
-    		overlapSet.add(maxEndInterval);
-    		overlapSet.add(next);
-    	}
-    	if(maxEndInterval.end < curr.end)
+      Interval curr = data.get(i);
+      Interval next = data.get(i + 1);
+      
+      if(curr.end > next.start)
+      {
+        overlapSet.add(curr);
+        overlapSet.add(next);
+      }
+      if(maxEndInterval.end > next.start)
+      {
+        overlapSet.add(maxEndInterval);
+        overlapSet.add(next);
+      }
+      if(maxEndInterval.end < curr.end)
         maxEndInterval = curr;
     }
     
     for(Interval interval : data)
     {
-    	if(!overlapSet.contains(interval))
-    		nonOverlap.add(interval);
+      if(!overlapSet.contains(interval))
+        nonOverlap.add(interval);
     }
     
     return (nonOverlap.size() >= 1) ? nonOverlap : null;
-	}
-	
+  }
+  
   public static void main(String[] args)
   {
-  	try
-  	{
-  		int total = 5;
-  		ArrayList<Interval> intervalList = generateRandomData(total);
-  		System.out.println("Original data : ");
-  		printData(intervalList);
-  		
-  		System.out.println("Non-overlap intervals : ");
-  		ArrayList<Interval> nonOverlapIntervals = getNonOverlappingIntervals(intervalList);
-  		
-  		if(nonOverlapIntervals == null)
-  			System.out.println("NULL SET");
-  		else
-  		  printData(nonOverlapIntervals);
-  	}
-  	catch(Exception e)
-  	{
-  		System.err.println(e.getMessage());
-  		e.printStackTrace();
-  	}
+    try
+    {
+      int total = 5;
+      ArrayList<Interval> intervalList = generateRandomData(total);
+      System.out.println("Original data : ");
+      printData(intervalList);
+      
+      System.out.println("Non-overlap intervals : ");
+      ArrayList<Interval> nonOverlapIntervals = getNonOverlappingIntervals(intervalList);
+      
+      if(nonOverlapIntervals == null)
+        System.out.println("NULL SET");
+      else
+        printData(nonOverlapIntervals);
+    }
+    catch(Exception e)
+    {
+      System.err.println(e.getMessage());
+      e.printStackTrace();
+    }
   }
   
   /**
@@ -80,28 +80,28 @@ public class FindNonOverlappingIntervals
    */
   private static ArrayList<Interval> generateRandomData(int total)
   {
-  	ArrayList<Interval> data = new ArrayList<Interval>(total);
-  	Random random = new Random();
-  	
-  	for(int i = 0; i < total; i++)
-  	{
-  		int start = random.nextInt(100);
-  		int duration = random.nextInt(20);
-  		
-  		if(duration == 0) duration = 1;
-  		
-  		data.add(new Interval(start, start + duration));
-  	}
-  	
-  	Collections.sort(data);
-  	
-  	return data;
+    ArrayList<Interval> data = new ArrayList<Interval>(total);
+    Random random = new Random();
+    
+    for(int i = 0; i < total; i++)
+    {
+      int start = random.nextInt(100);
+      int duration = random.nextInt(20);
+      
+      if(duration == 0) duration = 1;
+      
+      data.add(new Interval(start, start + duration));
+    }
+    
+    Collections.sort(data);
+    
+    return data;
   }
   
   private static void printData(ArrayList<Interval> data)
   {
-  	for(Interval d : data)
-  		System.out.print(d + " ");
+    for(Interval d : data)
+      System.out.print(d + " ");
   }
 }
 
@@ -112,24 +112,24 @@ public class FindNonOverlappingIntervals
  */
 class Interval implements Comparable<Interval>
 {
-	int start;
-	int end;
-	
-	Interval(int start, int end)
-	{
-		this.start = start;
-		this.end = end;
-	}
-	
-	@Override
-	public String toString()
-	{
-		return "(" + start + "," + end + ")";
-	}
+  int start;
+  int end;
+  
+  Interval(int start, int end)
+  {
+    this.start = start;
+    this.end = end;
+  }
+  
+  @Override
+  public String toString()
+  {
+    return "(" + start + "," + end + ")";
+  }
 
-	@Override
-	public int compareTo(Interval o)
-	{
+  @Override
+  public int compareTo(Interval o)
+  {
     return this.start - o.start;
-	}
+  }
 }
