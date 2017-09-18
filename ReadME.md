@@ -11,7 +11,7 @@ Many common data structures and algorithms questions and their solutions.
 - [Find longest word made of other given words](src/com/arrays_strings/LongestWordMadeOfOtherWords.java)
 - [Power set of a given string - non recursive](src/com/arrays_strings/PowerSetNonRecursive.java)
 - [Maximum subsequence sum of an int array](src/com/arrays_strings/maxSubseqSum.C)
-- [Spiral traversal of a matrix](src/com/arrays_strings/MatrixTraversal.java)
+- [Spiral traversal of a matrix](src/com/arrays_strings/MatrixSpiralTraversal.java)
 - [Cost of fused rods](src/com/arrays_strings/CostFusedRods.java)
 - [Longest palindrome in the given string](src/com/arrays_strings/LongestPalindrome.java)
 - [Placing flowers in a row with constraints](src/com/arrays_strings/CanPlaceFlowers.java)
