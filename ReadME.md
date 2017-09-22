@@ -15,7 +15,7 @@ Many common data structures and algorithms questions and their solutions.
 - [Cost of fused rods](src/com/arrays_strings/CostFusedRods.java)
 - [Longest palindrome in the given string](src/com/arrays_strings/LongestPalindrome.java)
 - [Placing flowers in a row with constraints](src/com/arrays_strings/CanPlaceFlowers.java)
-- [Find non-overlapping interval in a set of intervals](src/com/arrays_strings/FindNonOverlappingIntervals.java)
+- [Find non-overlapping intervals in a set of intervals](src/com/arrays_strings/FindNonOverlappingIntervals.java)
 
 #### [Dynamic Programming](src/com/dynamicproogramming)
 - [Optimal order of Matrix Multiplication](src/com/dynamicprogramming/OptimalMatrixMultiplicationCost.java)
