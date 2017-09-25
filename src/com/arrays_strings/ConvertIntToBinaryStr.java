@@ -1,51 +1,43 @@
 package com.arrays_strings;
 
-import java.util.*;
-
 /**
  * Class to represent convert an integer into its string representation in
  * binary format.
  */
 public class ConvertIntToBinaryStr
 {
-  public static void convertInt(int input)
+  public static String convertInt(int input)
   {
-    char temp;
-    StringBuffer result = new StringBuffer();
+    StringBuilder result = new StringBuilder();
 
     if(input < 0)
     {
       System.err.println("Does not handle negative numbers right now");
-      return;
+      return null;
     }
-    if(input == 0)
+    
+    do
     {
-      result.append("0");
+      if((input & 1) != 0)
+        result.append("1");
+      else
+        result.append("0");
+      input = input >> 1;
     }
-    else
-    {
-      while(input > 0)
-      {
-        if((input & 1) > 0)
-          result.append("1");
-        else
-          result.append("0");
-        input = input >> 1;
-      }
-      result.reverse();
-    }
+    while(input > 0);
 
-    System.out.println("The equivalent binary string is : " + result.toString());
+    result.reverse();
+
+    return result.toString();
   }
 
   public static void main(String args[])
   {
-  	args = new String[1];
-  	args[0] = "23";
+    int[] numbers = {0, 8, 7, 12, 2, 3, 6, 23};
   	
-    System.out.println("Input number : " + args[0]);
-
-    convertInt(Integer.parseInt(args[0]));
+    for(int number : numbers)
+    {
+    	System.out.println("Number : " + number + " Binary String : " + convertInt(number));
+    }
   }
-
 }
