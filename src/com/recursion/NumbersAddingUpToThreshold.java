@@ -9,103 +9,88 @@ import java.util.*;
  */
 public class NumbersAddingUpToThreshold
 {
-  private int[] input;
-  private int X;
-  private int totalSolutions;
-  
-  public NumbersAddingUpToThreshold(int[] givenArray, int X)
-  {
-    this.X = X;
-    
-    ArrayList<Integer> temp = new ArrayList<Integer>();
-    
-    for(int i = 0; i < givenArray.length; i++)
-    {
-      if(givenArray[i] <= X)
-        temp.add(givenArray[i]);
-    }
-    
-    if(temp.size() > 0)
-    {
-      Collections.sort(temp);
-      input = new int[temp.size()];
-      
-      for(int i = 0; i < temp.size(); i++)
-        input[i] = temp.get(i);
-    }
-    
+	private HashSet<HashSet<Integer>> allSolutions;
+	private int[] input;
+	private int target;
+	
+	public NumbersAddingUpToThreshold(int[] input, int target)
+	{
+		this.target = target;
+		this.input = input;
+		allSolutions = new HashSet<HashSet<Integer>>();
+	}
+	
+	public void solve()
+	{
+		Arrays.sort(input);
+		
     System.out.println("Sorted array : ");
     for(int i = 0; i < input.length; i++)
       System.out.print(input[i] + " ");
     System.out.println("\n");
-  }
-  
-  public void solve()
-  {
-    if(input == null || input.length < 1)
-    {
-      System.out.println("No solutions.");
-      return;
-    }
     
-    HashSet<Integer> currentSolution;
-    
-    System.out.println("Solutions : ");
-    for(int i = 0; i < input.length; i++)
-    {
-      currentSolution = new HashSet<Integer>();
-      currentSolution.add(input[i]);
-      solveRecursive(currentSolution, i + 1, X - input[i]);
-    }
-    
-    System.out.println("Total solutions = " + totalSolutions);
-  }
-  
-  private void solveRecursive(HashSet<Integer> currentSolution, int startIndex, int partialSum)
-  {
-    if(startIndex >= input.length)
-      return;
-    
- //   System.out.println("Start  = " + input[startIndex] + " Partial Sum = " + partialSum);
-    int currNum = input[startIndex];
-    int newSum = partialSum - currNum;
-    
-    // Found the solution
-    if(newSum == 0)
-    {
-      totalSolutions++;
-      currentSolution.add(currNum);
-      printSolution(currentSolution);
-      return;
-    }
-    else
-    {
-      if(newSum >= currNum)
-      {
-        currentSolution.add(currNum);
-        solveRecursive(currentSolution, startIndex + 1, partialSum - currNum);
-      }
-      currentSolution.remove(currNum);
-      solveRecursive(currentSolution, startIndex + 1, partialSum);
-    }
-  }
-  
-  private void printSolution(HashSet<Integer> currentSolution)
-  {
-    Iterator<Integer> iter = currentSolution.iterator();
-    
-    while(iter.hasNext())
-      System.out.print(iter.next() + " ");
-    System.out.println();
-    
-    currentSolution = new HashSet<Integer>();
-  }
-  
+		for(int i = 0; i < input.length; i++)
+		{
+			int sum = input[i];
+			
+			if(sum <= target)
+			{
+			  HashSet<Integer> soln = new HashSet<Integer>();
+			  soln.add(sum);
+				findRecursive(soln, sum, i + 1);
+			}
+		}
+		
+		Iterator<HashSet<Integer>> iter = allSolutions.iterator();
+		
+		System.out.println("Solutions where numbers sum to " + target + " : ");
+		while(iter.hasNext())
+			printSolution(iter.next());
+	}
+	
+	private void findRecursive(HashSet<Integer> solution, int sum, int index)
+	{
+		if(sum == target)
+		{
+			allSolutions.add(solution);
+			return;
+		}
+		else
+		if(sum > target)
+			return;
+		// Now sum < target
+		
+		if(index < input.length)
+		{
+			int newSum = sum + input[index];
+			
+			if(newSum <= target)
+			{
+				HashSet<Integer> newSolution = new HashSet<Integer>(solution);
+				newSolution.add(input[index]);
+				findRecursive(newSolution, newSum, index + 1); // Add 
+				findRecursive(solution, sum, index + 1);
+			}
+		}
+	}
+	
+	private void printSolution(HashSet<Integer> soln)
+	{
+		Iterator<Integer> iter = soln.iterator();
+		
+		System.out.print("{ ");
+		while(iter.hasNext())
+		{
+			System.out.print(iter.next() + " ");
+		}
+		System.out.println(" }");
+	}
+	
   public static void main(String[] args)
   {
     try
     {
-      int[] input = {17, 8, 32, 3, 6, 4, 2, 1};
+      int[] input = {17, 8, 32, 3, 6, 4, 2, 1, 10, 0};
       int X = 10;
       
       NumbersAddingUpToThreshold xx = new NumbersAddingUpToThreshold(input, X);
