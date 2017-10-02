@@ -28,7 +28,8 @@ Many common data structures and algorithms questions and their solutions.
 - [Word transformation using breadth first search](src/com/graphs/WordLadder.java)
 
 #### [Recursion](src/com/recursion)
-- [Permutations & combinations of given word](src/com/recursion/Permute.C)
+- [Permutations of the given string](src/com/recursion/PermuteAll.java)
+- [Combinations of the given string](src/com/recursion/Combinations.java)
 - [N Queen problem](src/com/recursion/NQueenProblem.java)
 - [Print all paths through a matrix](src/com/recursion/MatrixAllPaths.java)
 - [Power set of a given string](src/com/recursion/PowerSetRecursive.java)
