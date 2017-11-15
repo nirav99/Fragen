@@ -36,6 +36,7 @@ Many common data structures and algorithms questions and their solutions.
 - [Phone number to letters](src/com/recursion/PhoneNumberToLetters.java)
 - [Power sum](src/com/recursion/PowerSum.java)
 - [Numbers adding upto a given threshold](src/com/recursion/NumbersAddingUpToThreshold.java)
+- [Separate words from the string based on dictionary](src/com/recursion/SeparateWords.java)
 
 #### [Trie](src/com/trie)
 - [Longest common prefix of a set of strings](src/com/trie/LongestCommonPrefix.java)
