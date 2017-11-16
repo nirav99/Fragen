@@ -61,7 +61,7 @@ public class SeparateWords
     StringBuilder result = new StringBuilder();
     
     for(String s : currentSolution)
-      result.append(s).append("/");
+      result.append(s).append(" ");
     
     result.setLength(result.length() - 1);
     
