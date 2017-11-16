@@ -25,7 +25,6 @@ Many common data structures and algorithms questions and their solutions.
 #### [Graph Algorithms](src/com/graphs)
 - [Dijkstra's shortest path algorithm](src/com/graphs/MinCostPath.java)
 - [Kruskal's min. spanning tree](src/com/graphs/MinSpanningTreeKruskals.java)
-- [Word transformation using breadth first search](src/com/graphs/WordLadder.java)
 
 #### [Recursion](src/com/recursion)
 - [Permutations of the given string](src/com/recursion/PermuteAll.java)
@@ -51,3 +50,6 @@ Many common data structures and algorithms questions and their solutions.
 
 ### [Binary Search](src/com/binarysearch)
 - [Kth Largest Element in array](src/com/binarysearch/KthLargestElement.java)
+
+### [Breadth First Search](src/com/breadth_first_search)
+- [Word transformation](src/com/breadth_first_search/WordLadder.java)

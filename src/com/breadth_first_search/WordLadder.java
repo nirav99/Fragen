@@ -1,4 +1,4 @@
-package com.graphs;
+package com.breadth_first_search;
 import java.util.*;
 
 /**
