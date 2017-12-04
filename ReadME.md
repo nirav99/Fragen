@@ -43,6 +43,7 @@ Many common data structures and algorithms questions and their solutions.
 
 #### [Trees](src/com/trees)
 - [Least common ancestor in a binary search tree](src/com/trees/LeastCommonAncestorBinarySearchTree.java)
+- [Print a binary tree column-wise](src/com/trees/PrintBinaryTreeColumnwise.java)
 
 #### [Sorting](src/com/sorting)
 - [QuickSort](src/com/sorting/QuickSort.java)
