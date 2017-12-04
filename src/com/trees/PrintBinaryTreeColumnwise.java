@@ -27,28 +27,28 @@ public class PrintBinaryTreeColumnwise
     
     TreeNode(int data)
     {
-    	this.data = data;
-    	left = null;
-    	right = null;
-    	height = -1;
-    	column = -1;
+      this.data = data;
+      left = null;
+      right = null;
+      height = -1;
+      column = -1;
     }
 
-		@Override
-		public int compareTo(TreeNode other)
-		{	
+    @Override
+    public int compareTo(TreeNode other)
+    {  
       if(this.column < other.column)
-      	return 1;
+        return 1;
       else
       if(this.column > other.column)
-      	return -1;
+        return -1;
       else
       {
-      	if(this.height < other.height)
-      		return -1;
-      	return 1;
+        if(this.height < other.height)
+          return -1;
+        return 1;
       }
-		}
+    }
   }
   
   private TreeNode root = null;
@@ -56,28 +56,28 @@ public class PrintBinaryTreeColumnwise
   
   private PrintBinaryTreeColumnwise(int numNodes)
   {
-  	rn = new Random();
-  	int value = rn.nextInt(100);
-  	System.out.println("Root value : " + value);
-  	root = new TreeNode(value);
-  	
-  	for(int i = 0; i < numNodes - 1; i++)
-  		addNode(new TreeNode(rn.nextInt(100)));
-  	
-  	assignHeight(root, 0);
-  	assignColumn(root, numNodes);
-  	
-  	System.out.println("Original tree (pre-order) : ");
-  	printPreOrder(root);
-  	System.out.println();
-  	
-  	List<TreeNode> list = new ArrayList<TreeNode>();
-  	buildListOfNodes(root, list);
+    rn = new Random();
+    int value = rn.nextInt(100);
+    System.out.println("Root value : " + value);
+    root = new TreeNode(value);
+    
+    for(int i = 0; i < numNodes - 1; i++)
+      addNode(new TreeNode(rn.nextInt(100)));
+    
+    assignHeight(root, 0);
+    assignColumn(root, numNodes);
+    
+    System.out.println("Original tree (pre-order) : ");
+    printPreOrder(root);
+    System.out.println();
+    
+    List<TreeNode> list = new ArrayList<TreeNode>();
+    buildListOfNodes(root, list);
 
-  	Collections.sort(list);
-  	System.out.println("Printing tree column-wise :");
-  	printList(list);
-  	
+    Collections.sort(list);
+    System.out.println("Printing tree column-wise :");
+    printList(list);
+    
   }
   
   /**
@@ -86,41 +86,41 @@ public class PrintBinaryTreeColumnwise
    */
   private void addNode(TreeNode n)
   {
-  	TreeNode trav = root;
-  	
-  	while(true)
-  	{
-  		if(trav.data < n.data)
-  		{
-  			if(trav.left != null)
-  			  trav = trav.left;
-  			else
-  			{
-  				trav.left = n;
-  				break;
-  			}
-  		}
-  		else
-  		{
-  			if(trav.right != null)
-  				trav = trav.right;
-  			else
-  			{
-  				trav.right = n;
-  				break;
-  			}
-  		}
-  	}
+    TreeNode trav = root;
+    
+    while(true)
+    {
+      if(trav.data < n.data)
+      {
+        if(trav.left != null)
+          trav = trav.left;
+        else
+        {
+          trav.left = n;
+          break;
+        }
+      }
+      else
+      {
+        if(trav.right != null)
+          trav = trav.right;
+        else
+        {
+          trav.right = n;
+          break;
+        }
+      }
+    }
   }
   
   private void printPreOrder(TreeNode n)
   {
-  	if(n != null)
-  	{
-  		System.out.print(n.data + " ");
-  		printPreOrder(n.left);
-  		printPreOrder(n.right);
-  	}
+    if(n != null)
+    {
+      System.out.print(n.data + " ");
+      printPreOrder(n.left);
+      printPreOrder(n.right);
+    }
   }
   
   /**
@@ -130,22 +130,22 @@ public class PrintBinaryTreeColumnwise
    */
   private void assignHeight(TreeNode n, int height)
   {
-  	if(n != null)
-  	{
-  		n.height = height;
-  		assignHeight(n.left, height + 1);
-  		assignHeight(n.right, height + 1);
-  	}
+    if(n != null)
+    {
+      n.height = height;
+      assignHeight(n.left, height + 1);
+      assignHeight(n.right, height + 1);
+    }
   }
   
   private void assignColumn(TreeNode n, int column)
   {
-  	if(n != null)
-  	{
-  		n.column = column;
-  		assignColumn(n.left, column - 1);
-  		assignColumn(n.right, column + 1);
-  	}
+    if(n != null)
+    {
+      n.column = column;
+      assignColumn(n.left, column - 1);
+      assignColumn(n.right, column + 1);
+    }
   }
   
   /**
@@ -155,30 +155,30 @@ public class PrintBinaryTreeColumnwise
    */
   private void buildListOfNodes(TreeNode n, List<TreeNode> list)
   {
-  	if(n != null)
-  	{
-  		list.add(n);
-  		buildListOfNodes(n.left, list);
-  		buildListOfNodes(n.right, list);
-  	}
+    if(n != null)
+    {
+      list.add(n);
+      buildListOfNodes(n.left, list);
+      buildListOfNodes(n.right, list);
+    }
   }
   
   private void printList(List<TreeNode> list)
   {
-  	for(TreeNode n : list)
-  		System.out.print(n.data + " ");
-  	System.out.println();
+    for(TreeNode n : list)
+      System.out.print(n.data + " ");
+    System.out.println();
   }
   
   public static void main(String[] args)
   {
-  	try
-  	{
-  		PrintBinaryTreeColumnwise bt = new PrintBinaryTreeColumnwise(5);
-  	}
-  	catch(Exception e)
-  	{
-  		e.printStackTrace();
-  	}
+    try
+    {
+      PrintBinaryTreeColumnwise bt = new PrintBinaryTreeColumnwise(5);
+    }
+    catch(Exception e)
+    {
+      e.printStackTrace();
+    }
   }
 }
