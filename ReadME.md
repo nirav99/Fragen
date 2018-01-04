@@ -52,6 +52,7 @@ Many common data structures and algorithms questions and their solutions.
 
 #### [Binary Search](src/com/binarysearch)
 - [Kth Largest Element in array](src/com/binarysearch/KthLargestElement.java)
+- [Square root of a real number](src/com/binarysearch/SquareRoot.java)
 
 #### [Breadth First Search](src/com/breadth_first_search)
 - [Word transformation](src/com/breadth_first_search/WordLadder.java)
