@@ -58,5 +58,5 @@ Many common data structures and algorithms questions and their solutions.
 - [Word transformation](src/com/breadth_first_search/WordLadder.java)
 - [Maze distance calculator](src/com/breadth_first_search/MazeDistanceCalculator.java)
 
-### [Matrices](src/com/matrices/)
+### [Matrices](src/com/matrices)
 - [SearchSortedMatrix](src/com/matrices/SearchSortedMatrix.java)
