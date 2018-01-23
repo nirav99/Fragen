@@ -59,4 +59,4 @@ Many common data structures and algorithms questions and their solutions.
 - [Maze distance calculator](src/com/breadth_first_search/MazeDistanceCalculator.java)
 
 ### [Matrices](src/com/matrices)
-- [SearchSortedMatrix](src/com/matrices/SearchSortedMatrix.java)
+- [Efficient Search in a Sorted Matrix](src/com/matrices/SearchSortedMatrix.java)
