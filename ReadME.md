@@ -57,7 +57,7 @@ Many common data structures and algorithms questions and their solutions.
 #### [Breadth First Search](src/com/breadth_first_search)
 - [Word transformation](src/com/breadth_first_search/WordLadder.java)
 - [Maze distance calculator](src/com/breadth_first_search/MazeDistanceCalculator.java)
-- [LinkedList for all the nodes at each level of a binary tree](src/com/breadth_first_search/LinkedListForEachTreeLevel)
+- [LinkedList for all the nodes at each level of a binary tree](src/com/breadth_first_search/LinkedListForEachTreeLevel.java)
 
 #### [Matrices](src/com/matrices)
 - [Efficient Search in a Sorted Matrix](src/com/matrices/SearchSortedMatrix.java)
