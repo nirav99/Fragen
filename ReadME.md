@@ -45,7 +45,6 @@ Many common data structures and algorithms questions and their solutions.
 #### [Trees](src/com/trees)
 - [Least common ancestor in a binary search tree](src/com/trees/LeastCommonAncestorBinarySearchTree.java)
 - [Print a binary tree column-wise](src/com/trees/PrintBinaryTreeColumnwise.java)
-- [LinkedList for all the nodes at each level of a binary tree](src/com/trees/LinkedListForEachTreeLevel)
 
 #### [Sorting](src/com/sorting)
 - [QuickSort](src/com/sorting/QuickSort.java)
@@ -58,6 +57,7 @@ Many common data structures and algorithms questions and their solutions.
 #### [Breadth First Search](src/com/breadth_first_search)
 - [Word transformation](src/com/breadth_first_search/WordLadder.java)
 - [Maze distance calculator](src/com/breadth_first_search/MazeDistanceCalculator.java)
+- [LinkedList for all the nodes at each level of a binary tree](src/com/breadth_first_search/LinkedListForEachTreeLevel)
 
 #### [Matrices](src/com/matrices)
 - [Efficient Search in a Sorted Matrix](src/com/matrices/SearchSortedMatrix.java)
