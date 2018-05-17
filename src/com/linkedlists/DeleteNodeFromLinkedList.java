@@ -1,4 +1,4 @@
-package linkedlists;
+package com.linkedlists;
 
 /**
  * Delete node(s) matching the given data from the singly linked list
