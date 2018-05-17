@@ -11,11 +11,11 @@ public class LinkedListForEachTreeLevel
 {
   class TreeNode
   {
-  	int data;
-  	int height;
-  	TreeNode left;
-  	TreeNode right;
-  	
+    int data;
+    int height;
+    TreeNode left;
+    TreeNode right;
+    
     TreeNode(int data)
     {
       this.data = data;
@@ -52,25 +52,25 @@ public class LinkedListForEachTreeLevel
     
     while(!queue.isEmpty())
     {
-    	TreeNode next = queue.pollFirst();
-    	
-    	if(next.left != null)
-    		queue.add(next.left);
-    	if(next.right != null)
-    		queue.add(next.right);
-    	
-    	if(next.height == prevLevel)
-    	{
-    		resultList.get(prevLevel).add(next);
-    	}
-    	else
-    	{
-    		ArrayList<TreeNode> newList = new ArrayList<TreeNode>();
-    		newList.add(next);
-    		resultList.add(newList);
-    		prevLevel++;
-    		
-    	}
+      TreeNode next = queue.pollFirst();
+      
+      if(next.left != null)
+        queue.add(next.left);
+      if(next.right != null)
+        queue.add(next.right);
+      
+      if(next.height == prevLevel)
+      {
+        resultList.get(prevLevel).add(next);
+      }
+      else
+      {
+        ArrayList<TreeNode> newList = new ArrayList<TreeNode>();
+        newList.add(next);
+        resultList.add(newList);
+        prevLevel++;
+        
+      }
     }
     
     printAllLinkedLists(resultList);
@@ -84,9 +84,9 @@ public class LinkedListForEachTreeLevel
   
   private void printList(ArrayList<TreeNode> list)
   {
-	  for(TreeNode n : list)
-	  	System.out.print(n.data + " ");
-	  System.out.println();
+    for(TreeNode n : list)
+      System.out.print(n.data + " ");
+    System.out.println();
   }
   
   private void addNode(TreeNode n)
@@ -134,7 +134,7 @@ public class LinkedListForEachTreeLevel
   {
     try
     {
-    	LinkedListForEachTreeLevel bt = new LinkedListForEachTreeLevel(5);
+      LinkedListForEachTreeLevel bt = new LinkedListForEachTreeLevel(5);
     }
     catch(Exception e)
     {
