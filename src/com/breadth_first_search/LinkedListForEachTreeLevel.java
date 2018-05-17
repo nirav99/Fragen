@@ -1,4 +1,4 @@
-package com.trees;
+package com.breadth_first_search;
 
 import java.util.*;
 
