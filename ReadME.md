@@ -17,7 +17,7 @@ Many common data structures and algorithms questions and their solutions.
 - [Placing flowers in a row with constraints](src/com/arrays_strings/CanPlaceFlowers.java)
 - [Find non-overlapping intervals in a set of intervals](src/com/arrays_strings/FindNonOverlappingIntervals.java)
 - [Rotate a square matrix 90 degrees clockwise without using additional space](src/com/arrays_strings/RotateMatrixClockwise.java)
-- [Validate if Sudoku board is valid](src/com/arrays_strings/SudokuValidator.java)
+- [Validate the given Sudoku board](src/com/arrays_strings/SudokuValidator.java)
 
 #### [Dynamic Programming](src/com/dynamicproogramming)
 - [Optimal order of Matrix Multiplication](src/com/dynamicprogramming/OptimalMatrixMultiplicationCost.java)
